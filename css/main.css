@@ -1,0 +1,30 @@
+.termsfeed-com---palette-dark .cc-nb-okagree {
+  background-color: #f8ffbf;
+  color: #1a1b1f;
+}
+
+.termsfeed-com---palette-dark .cc-nb-reject {
+  color: #f8ffbf;
+  background-color: #1a1b1f;
+}
+
+.termsfeed-com---palette-dark .cc-nb-changep {
+  background-color: #1a1b1f;
+  color: #f8ffbf;
+}
+
+.termsfeed-com---nb-headline {
+  right: 0;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  position: fixed;
+  height: fit-content;
+}
+
+.termsfeed-com---nb {
+  overflow: auto;
+  z-index: 99;
+  font-size: 16px;
+}
