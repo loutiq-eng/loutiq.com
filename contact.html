@@ -44,6 +44,7 @@
       crossorigin="anonymous"
     />
     <script src="contact_files/webfont.js" type="text/javascript"></script>
+    <script src="./scripts/main.js" type="text/javascript"></script>
     <script src="contact_files/page-script.js"></script>
     <link rel="stylesheet" href="contact_files/css.css" media="all" />
     <script type="text/javascript">
@@ -188,7 +189,7 @@
         <div class="contact-form w-form">
           <form
             id="email-form"
-            name="wf-form-Get-In-Touch-Form"
+            name="brand-form"
             data-name="Get In Touch Form"
             method="post"
             class="get-in-touch-form"
@@ -246,12 +247,11 @@
               class="textarea w-input"
             ></textarea>
             <div class="text-block-6">*required</div>
-            <input
+            <button
               type="submit"
-              value="Let's connect"
               data-wait="Please wait..."
               class="button w-button"
-            />
+              id="form-submit">Let's connect</button>
           </form>
           <div
             class="status-message cc-success-message w-form-done"
