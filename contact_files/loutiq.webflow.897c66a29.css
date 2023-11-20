@@ -1970,21 +1970,21 @@ textarea.w-input, textarea.w-select {
 
 @media screen and (max-width: 991px) {
   .w-nav[data-collapse="medium"] .w-nav-menu {
-    display: none;
+    display: block;
   }
 
   .w-nav[data-collapse="medium"] .w-nav-button {
-    display: block;
+    display: none;
   }
 }
 
 @media screen and (max-width: 767px) {
   .w-nav[data-collapse="small"] .w-nav-menu {
-    display: none;
+    display: block;
   }
 
   .w-nav[data-collapse="small"] .w-nav-button {
-    display: block;
+    display: none;
   }
 
   .w-nav-brand {
@@ -1994,11 +1994,11 @@ textarea.w-input, textarea.w-select {
 
 @media screen and (max-width: 479px) {
   .w-nav[data-collapse="tiny"] .w-nav-menu {
-    display: none;
+    display: block;
   }
 
   .w-nav[data-collapse="tiny"] .w-nav-button {
-    display: block;
+    display: none;
   }
 }
 
@@ -2386,6 +2386,10 @@ figcaption {
 .button.cc-contact-us:hover {
   color: #221f20;
   background-color: #f8ffbf;
+}
+
+.button.cc-contact-us:hover > .text-block-2 {
+  color: #221f20;
 }
 
 .button.cc-contact-us.w--current {
@@ -3479,7 +3483,7 @@ figcaption {
   }
 
   .button.cc-contact-us {
-    display: none;
+    display: block;
   }
 
   .heading-jumbo {

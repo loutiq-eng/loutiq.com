@@ -1938,6 +1938,63 @@
     }
   });
 
+  // packages/shared/render/plugins/BaseSiteModules/webflow-ix-events.js
+  var require_webflow_ix_events = __commonJS({
+    "packages/shared/render/plugins/BaseSiteModules/webflow-ix-events.js"(exports, module) {
+      "use strict";
+      var $ = window.jQuery;
+      var api = {};
+      var eventQueue = [];
+      var namespace = ".w-ix";
+      var eventTriggers = {
+        reset: function(i, el) {
+          el.__wf_intro = null;
+        },
+        intro: function(i, el) {
+          if (el.__wf_intro) {
+            return;
+          }
+          el.__wf_intro = true;
+          $(el).triggerHandler(api.types.INTRO);
+        },
+        outro: function(i, el) {
+          if (!el.__wf_intro) {
+            return;
+          }
+          el.__wf_intro = null;
+          $(el).triggerHandler(api.types.OUTRO);
+        }
+      };
+      api.triggers = {};
+      api.types = {
+        INTRO: "w-ix-intro" + namespace,
+        OUTRO: "w-ix-outro" + namespace
+      };
+      api.init = function() {
+        var count = eventQueue.length;
+        for (var i = 0; i < count; i++) {
+          var memo = eventQueue[i];
+          memo[0](0, memo[1]);
+        }
+        eventQueue = [];
+        $.extend(api.triggers, eventTriggers);
+      };
+      api.async = function() {
+        for (var key in eventTriggers) {
+          var func = eventTriggers[key];
+          if (!eventTriggers.hasOwnProperty(key)) {
+            continue;
+          }
+          api.triggers[key] = function(i, el) {
+            eventQueue.push([func, el]);
+          };
+        }
+      };
+      api.async();
+      module.exports = api;
+    }
+  });
+
   // packages/shared/render/plugins/BaseSiteModules/webflow-ix2-events.js
   var require_webflow_ix2_events = __commonJS({
     "packages/shared/render/plugins/BaseSiteModules/webflow-ix2-events.js"(exports, module) {
