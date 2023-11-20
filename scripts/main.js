@@ -4,6 +4,11 @@ const handleSubmit = (event) => {
   const myForm = event.target;
   const formData = new FormData(myForm);
 
+  var object = {};
+  formData.forEach((value, key) => object[key] = value);
+  var formJson = JSON.stringify(object);
+  dataLayer.push(formJson.concat({'event': 'form-submission'}));
+
   fetch("/", {
     method: "POST",
     headers: { "Content-Type": "application/x-www-form-urlencoded" },
