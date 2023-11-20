@@ -802,6 +802,11 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 991px) {
+  .home-section-wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .w-container {
     max-width: 728px;
   }
@@ -870,6 +875,11 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 767px) {
+  .home-section-wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .w-hidden-main, .w-hidden-medium {
     display: inherit !important;
   }
@@ -939,6 +949,11 @@ textarea.w-input, textarea.w-select {
 }
 
 @media screen and (max-width: 479px) {
+  .home-section-wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .w-container {
     max-width: none;
   }
@@ -3152,7 +3167,7 @@ figcaption {
 
 .home-content-wrap {
   margin-top: 80px;
-  margin-bottom: 120px;
+  margin-bottom: 20px;
 }
 
 .home-section-wrap {
@@ -3358,6 +3373,12 @@ figcaption {
 
 .div-block {
   margin-top: 60px;
+}
+
+.text-movement-community {
+  margin-top: 20px;
+  font-size: 32px;
+  line-height: 34px;
 }
 
 .text-block-4 {
@@ -3807,6 +3828,11 @@ figcaption {
 }
 
 @media screen and (max-width: 479px) {
+  .home-section-wrap {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   h1 {
     font-size: 36px;
     line-height: 52px;
@@ -3886,6 +3912,11 @@ figcaption {
 
   .heading-jumbo-small-copy {
     font-size: 20px;
+  }
+
+  .text-movement-community {
+    font-size: 20px;
+    line-height: 24px;
   }
 
   .bold-text-4 {
