@@ -2361,13 +2361,11 @@ figcaption {
 }
 
 .button.cc-jumbo-button {
-  padding: 16px 35px;
   font-size: 14px;
   line-height: 26px;
 }
 
 .button.cc-jumbo-button.cc-jumbo-white {
-  height: 60px;
   opacity: 1;
   color: #000;
   -webkit-text-fill-color: inherit;
